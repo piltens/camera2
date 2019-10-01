@@ -57,5 +57,6 @@ function cameraStart() {
     });
 
 };
-// Start the video stream when the window loads
-window.addEventListener("load", cameraStart, false);
+window.onload = function(){
+  cameraStart();
+}

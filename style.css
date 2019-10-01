@@ -1,8 +1,14 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%:
+body {
+  margin:0;
+}
+
+aside {
+  position:fixed;
+  bottom:0;
+  left:0;
+  padding:0 1em;
+  background-color:yellow;
+  z-index:3;
 }
 
 #camera, #camera--view, #camera--sensor, #camera--output{
@@ -18,3 +24,35 @@ html, body{
     filter: FlipH;
 }
 
+body:not(.isDark) #foreground {
+  display:none;
+}
+
+video {
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+}
+
+section {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+#foreground {
+  background-color:red;
+  z-index:2;
+}
+
+#background {
+  z-index:1;
+}
+
+canvas {
+  position:fixed;
+  top:0;
+  left:0;
+}
